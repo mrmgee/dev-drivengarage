@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=domains/dev.drivengarage.com
+    - /bin/cp -R /home/c067m3dvoh99/repositories/dev-drivengarage
