@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/blog01/</loc>
+            <lastmod>2022-09-15T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/blog02/</loc>
+            <lastmod>2022-09-16T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/blog03/</loc>
+            <lastmod>2022-09-17T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/repair-and-maintenance/</loc>
+            <lastmod>2022-12-26T16:43:22.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/service-2/</loc>
+            <lastmod>2022-12-26T17:25:19.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+</urlset>
