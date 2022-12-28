@@ -1,0 +1,123 @@
+---
+title: Driven Garage - Projects
+description: Driven Garage nothern California restomod auto customization and repair shop
+featuredImage: /_images/default.jpg
+---
+
+
+{% include "head.njk" %}
+
+<body class="is-flex is-flex-direction-column">
+  {% include "nav.njk" %}
+
+    <section class="hero-services">
+        <div class="halftone-overlay"></div>
+        <div class="sec-bkg-img">
+
+        {% if featuredImage %}
+          <img src="..{{featuredImage}}" alt="{{title}}" style="margin-top: -24%; object-position: 0px 0px;">
+        {% endif %}
+
+        </div>
+        <div class="hero-body is-overlay">
+            <div class="container">
+                <h1 class="title">Projects</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="projects-body">
+       {% topPostMinimalAd %}
+
+        
+
+        {% bottomContentPostMinimalAd %}
+    </section>
+
+
+    <section class="projects">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <h3>Every build is infused with our blood and sweat. Taming metal and tuning performace.</h3>
+        {{ content | safe }}
+
+
+      </div>
+    
+      <div class="body-full">
+        <div class="bkg-stripe primary">
+          <div class="container">
+            <h3>’67 Chevy Nova</h3>
+          </div>
+        </div>
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <img src="{{ rootPath }}_images/1967-Chevrolet-Nova-SS-Super-Sport-Butternut-Yellow.png" alt="1967 Chevrolet Nova SS Super Sport Butternut Yellow">
+            </div>
+            <div class="column">
+              <!-- <h3>’67 Chevy Nova</h3> -->
+              <p>Tedious work for excellent results is the mark of true craftsmen - and we push our team to do the best they can every time.</p>
+              <p>Fabbed up some finish panels from the core support to grille. It tightened everything up a little.</p>
+              <p>A little extra effort can go a long way!</p>
+            </div>
+          </div><!-- END columns -->
+        </div>
+      </div><!-- END body-full -->
+    
+      <div class="body-full">
+        <div class="halftone-overlay"></div>
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <div class="galitem">
+                <figure class="image">
+                  <div class="control">
+                    <a href="#" target="_self">
+                      <img src="{{ rootPath }}_images/i-link-arr.png" alt="Link to more">
+                    </a>
+                  </div>
+                  <img src="{{ rootPath }}_images/67_Nova_body_gaps02.jpg" alt="67 Nova body gaps">
+                </figure>
+              </div><!-- END galitem -->
+            </div>
+    
+            <div class="column">
+              <div class="galitem">
+                <figure class="image">
+                  <div class="control">
+                    <a href="#" target="_self">
+                      <img src="{{ rootPath }}_images/i-link-arr.png" alt="Link to more">
+                    </a>
+                  </div>
+                  <img src="{{ rootPath }}_images/67_Nova_body03.jpg" alt="67 Nova body gaps">
+                </figure>
+              </div>
+            </div>
+    
+            <div class="column">
+              <div class="galitem">
+                <figure class="image">
+                  <div class="control">
+                    <a href="#" target="_self">
+                      <img src="{{ rootPath }}_images/i-link-arr.png" alt="Link to more">
+                    </a>
+                  </div>
+                  <img src="{{ rootPath }}_images/67_Nova_rear_bumper02.jpg" alt="67 Nova body gaps">
+                </figure>
+              </div><!-- END galitem -->
+            </div>
+    
+          </div><!-- END columns -->
+        </div><!-- END container -->
+    
+      </div><!-- END body-full -->
+    </section>
+
+
+
+  {% include "footer.njk" %}
+</body>
+
+</html>

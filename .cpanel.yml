@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/domains/test.drivengarage.com/
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp -R /home/c067m3dvoh99/repositories/dev-drivengarage/_site $DEPLOYPATH
