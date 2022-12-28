@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=domains/test.drivengarage.com
+    - export DEPLOYPATH=/domains/test.drivengarage.com
     - /bin/cp -R _site $DEPLOYPATH
