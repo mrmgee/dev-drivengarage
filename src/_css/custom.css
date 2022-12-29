@@ -49,9 +49,19 @@ body {
   font-size: 14px;
 }
 
+a.navbar-item:hover {
+  background-color: #f79837;
+
+}
+
 
 
 /* COLORS */
+
+/* NAV */
+a.navbar-item span {
+  color: #dbdbdb;
+}
 
 /* Alloy ORANGE Primary color */
 .hero.is-primary .title,
@@ -69,6 +79,7 @@ section.services-listing .title {
 .control .button.is-primary,
 section.feat-story .control .button.is-primary,
 .bkg-stripe.primary,
+.modal-content h2,
 .modal-close::before, .modal-close::after {
   background-color: #f79837;
 }
@@ -91,6 +102,7 @@ section.blog-cards h2 {
   color: #363636;
 }
 
+a.navbar-item:hover span, 
 .hero.is-primary,
 h4.cta-tag,
 .header-full p,
@@ -101,11 +113,16 @@ section.shop-slider .container.story-body p {
   color: #ffffff;
 }
 
+
+a.navbar-item:hover, 
+.button.is-primary.slant {
+  transform: skew(-24deg);
+} 
 .button.is-primary.slant {
   margin: 0 0 0 2rem;
-  transform: skew(-24deg);
-}  
-.button.is-primary.slant h4 {
+}
+.button.is-primary.slant h4, 
+a.navbar-item:hover span {
   transform: skew(24deg);
 }
 
@@ -130,7 +147,11 @@ section.shop-slider  .container.story-body h3,
   font-size: 2rem;
   font-weight: 700;
 }
-
+.modal-content h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 .cta-bar h3,
 .button.is-primary.slant h4 {
   font-size: 1.4rem;
@@ -139,6 +160,13 @@ section.shop-slider  .container.story-body h3,
 }
 .cta-bar h3 {
   margin: 0 0 0 4.4rem;
+}
+.modal-content h2 {
+  padding: 1rem;
+}
+.modal-content h3 {
+  margin: 0 0 2rem 0;
+  padding: 1rem 2rem;
 }
 section.projects .body-full h3,
 section.services-listing .title {
@@ -158,6 +186,10 @@ h4.cta-tag {
 h4.cta-tag span {
   font-weight: 700;
   font-style: italic;
+}
+a.navbar-item span {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 section.projects p:nth-child(1) {
@@ -236,7 +268,7 @@ section.hero-services .title {
 
 .cta-bar .control {
   position: relative;
-  right: 0;
+  right: 1rem;
 }
 
 
@@ -1150,3 +1182,4 @@ h4.foot-tag span {
 .social-flotante li a {
   margin: 5px 0;
 }
+
