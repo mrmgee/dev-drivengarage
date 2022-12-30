@@ -16,4 +16,16 @@
   },{
     "url" : "/projects/",
     "title" : "Projects"
+  },{
+    "url" : "/shop/",
+    "title" : "Speed Shop"
+  },{
+    "url" : "/services/body-paint-metalwork/",
+    "title" : "Body, Paint &amp; Metalwork"
+  },{
+    "url" : "/services/custom-fabrication/",
+    "title" : "Custom Fabrication"
+  },{
+    "url" : "/services/performance-upgrades/",
+    "title" : "Performance Upgrades"
   }]}

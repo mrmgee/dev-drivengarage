@@ -59,7 +59,8 @@ a.navbar-item:hover {
 /* COLORS */
 
 /* NAV */
-a.navbar-item span {
+a.navbar-item span, 
+section.services .item__body .control a {
   color: #dbdbdb;
 }
 
@@ -114,7 +115,7 @@ section.shop-slider .container.story-body p {
 }
 
 
-a.navbar-item:hover, 
+.navbar-end a.navbar-item:hover, 
 .button.is-primary.slant {
   transform: skew(-24deg);
 } 
@@ -122,7 +123,7 @@ a.navbar-item:hover,
   margin: 0 0 0 2rem;
 }
 .button.is-primary.slant h4, 
-a.navbar-item:hover span {
+.navbar-end a.navbar-item:hover span {
   transform: skew(24deg);
 }
 
@@ -136,9 +137,6 @@ section.carousel h2,
 section.blog-cards h2 {
   font-size: 3rem;
   font-weight: 700;
-}
-section.services h3 {
-  margin: 0 0 2rem 0;
 }
 
 section.shop-slider  .container.story-body h3,
@@ -274,6 +272,10 @@ section.hero-services .title {
 
 /* SERVICES */
 
+section.services .container:nth-child(1) > h3 {
+  margin: 0 0 2rem 0;
+}
+
 .feat-item-over {
   position: relative;
   height: 19rem;
@@ -330,7 +332,7 @@ section.services .feat-item-over a:hover ~ img {
   transform: scale(1.2);
 }
 
-.feat-item-over img {
+.feat-item-over > img {
   width: 100%;
   height: 100%;
   display: block;
@@ -384,7 +386,22 @@ section.services .feat-item-over a:hover ~ img {
 .item__body ul ul li {
   font-size: 0.9rem;
 }
-
+section.services .item__body .control {
+  width: 8rem;
+  height: 1.2rem;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.33);
+  z-index: 8;
+}
+section.services .item__body .control a {
+  display: flex;
+  justify-content: flex-end;
+  line-height: 1.2rem;
+}
+section.services .item__body .control a img {
+  margin: 0 0 0 0.4rem;
+}
 
 
 

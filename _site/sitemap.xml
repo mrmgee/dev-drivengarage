@@ -49,4 +49,36 @@
         </url>
         
     
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/shop/</loc>
+            <lastmod>2022-12-29T22:11:34.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/body-paint-metalwork/</loc>
+            <lastmod>2022-12-30T00:15:35.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/custom-fabrication/</loc>
+            <lastmod>2022-12-30T01:24:31.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/performance-upgrades/</loc>
+            <lastmod>2022-12-30T02:17:18.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
 </urlset>

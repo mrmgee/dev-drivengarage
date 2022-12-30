@@ -1,0 +1,158 @@
+---
+title: Custom Fabrication
+tags: ['service']
+description: Driven Garage nothern California restomod auto customization and repair shop
+featuredImage: /_images/Exhaust_custom_stainless.jpg
+---
+
+  {% include "head.njk" %}
+
+  <body class="is-flex is-flex-direction-column">
+
+    {% include "nav.njk" %}
+
+    {% include "hero-services.njk" %}
+
+
+    <section class="projects">
+        <div class="container">
+          <h2>Custom Build Solutions</h2>
+          <h3>Every build is infused with our blood and sweat. Taming metal and tuning performace.</h3>
+        </div>
+      
+        <div class="body-full">
+          <div class="bkg-stripe primary">
+            <div class="container">
+              <h3>Welded Custom Exhausts and Brackets</h3>
+            </div>
+          </div>
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <img src="{{ rootPath }}_images/CCS_Welding-8.jpg" alt="Welding closeup">
+              </div>
+              <div class="column">
+                <!-- <h3>’67 Chevy Nova</h3> -->
+                <p>We offer MIG and TIG welding services for a variety of different applications. From chassis work to sheet metal repair, our technicians have the skill and experience to produce strong and beautiful welds.</p>
+                <p>Depending on your application, and material requirements, we offer both MIG and TIG welding services. We will help you choose the process that is most applicable to the job. Our master fabricators are experienced in welding a variety of materials including: aluminum, stainless, mild steel, and chromoly. Our welds are not only functional and strong, but also attractive. Common welding applications at Classic Car Studio include: custom headers and exhaust, suspension and chassis work, body panel and rust repair, fuel cell fabrication, roll cage fabrication, and custom bracket fabrication.</p>
+              </div>
+            </div><!-- END columns -->
+          </div>
+        </div><!-- END body-full -->
+      
+        <div class="body-full">
+          <!-- <div class="halftone-overlay"></div> -->
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="galitem">
+                  <figure class="image">
+                    <div class="control">
+                      <a href="#" target="_self">
+                        <img src="{{ rootPath }}_images/i-link-arr.png" alt="Link to more">
+                      </a>
+                    </div>
+                    <img src="{{ rootPath }}_images/Exhaust_custom_stainless.jpg" alt="Custom fabricated exhaust" style="object-position: 0px -9rem;">
+                  </figure>
+                </div><!-- END galitem -->
+              </div>
+      
+              <div class="column">
+                <div class="galitem">
+                  <figure class="image">
+                    <div class="control">
+                      <a href="#" target="_self">
+                        <img src="{{ rootPath }}_images/i-link-arr.png" alt="Link to more">
+                      </a>
+                    </div>
+                    <img src="{{ rootPath }}_images/67_Nova_body03.jpg" alt="67 Nova body gaps">
+                  </figure>
+                </div>
+              </div>
+      
+              <div class="column">
+                <div class="galitem">
+                  <figure class="image">
+                    <div class="control">
+                      <a href="#" target="_self">
+                        <img src="{{ rootPath }}_images/i-link-arr.png" alt="Link to more">
+                      </a>
+                    </div>
+                    <img src="{{ rootPath }}_images/86_K10_bumber01.jpg" alt="67 Nova body gaps">
+                  </figure>
+                </div><!-- END galitem -->
+              </div>
+      
+            </div><!-- END columns -->
+          </div><!-- END container -->
+      
+        </div><!-- END body-full -->
+      </section>
+
+
+    <section class="services-listing">
+        <div class="container"><!-- START container 4 row -->
+            <div class="halftone-overlay"></div>
+            <div class="sec-bkg-img">
+            <img src="{{ rootPath }}_images/Exhaust_custom_stainless.jpg" alt="Exhaust custom stainless" loading="lazy">
+            </div>
+            <div class="hero-body is-overlay">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column is-one-third">
+                            <h1 class="title">Custom Fabrication</h1>
+                        </div>
+                        <div class="column is-two-third">
+                            <div>
+                                <p>Intro copy for Custom Fabrication detail page</p>
+                            </div>    
+    
+                            <div class="columns">
+                                <div class="column">
+                                    <ul>
+                                        <li>Exhaust</li>
+                                        <li>Custom Brackets</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li>Custom styling</li>
+                                        <li>Suspension</li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                        </div><!-- END column is-two-third -->
+                    </div>
+    
+                </div>
+            </div><!-- END hero-body is-overlay -->
+    
+        </div><!-- END container 4 row -->
+    
+    </section>
+
+
+
+
+
+
+
+
+
+    <h3>incl: service-post</h3>
+<ul>
+  {%- for post in collections.postsFolder %}
+  <li>
+  <a href="{{ post.url }}">
+  {{ post.data.title }}
+  </a>
+  </li>
+  {%- endfor %}
+</ul>
+
+
+    {% include "footer.njk" %}
+  </body>
+
+</html>

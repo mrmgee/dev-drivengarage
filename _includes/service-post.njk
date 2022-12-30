@@ -9,47 +9,38 @@ title: Service Detail page
 
     {% include "nav.njk" %}
 
-<section class="hero is-medium is-primary has-background">
-  <img class="hero-background is-transparent" src="{{ rootPath }}_images/cameros_half.png" alt="3 generations Cameros" />
-  <div class="hero-body is-overlay">
-    <div class="container">
-      <h3 class="subtitle">
-        Born from our
-      </h3>
-      <div class="hero-head">
-        <h1 class="title">Passion</h1>
-        <h1 class="title-sm">for</h1> 
-        <h1 class="title">Classic Cars</h1>
-      </div>
-    </div>
-  </div>
-  <div class="columns">
-    <div class="column">
-      <h4 class="cta-tag">Small jobs, big jobs,
-        all makes and models...
-        Yes, even <span>that</span> one</h4>
-    </div>
-    <div class="column">
-      <div class="cta-bar">
-        <h3>Sumbit a Work Request</h3>
-        <div class="control">
-          <a class="button is-primary slant js-modal-trigger" data-target="modal-js-example" href="#" target="_self"><h4>Get an Estimate</h4></a>
+    <section class="hero-services">
+        <div class="halftone-overlay"></div>
+        <div class="sec-bkg-img">
+
+        {% if featuredImage %}
+          <img src="{{ rootPath }}{{featuredImage}}" alt="{{title}}" style="margin-top: -24%; object-position: 0px -440px;">
+        {% endif %}
+
         </div>
-      </div>
-    </div>
-  </div><!-- END columns -->
-</section>
+        <div class="hero-body is-overlay">
+            <div class="container">
+                <h1 class="title">{{title}}</h1>
+            </div>
+        </div>
+    </section>
 
     <section class="section is-flex-grow-1">
 
        {% topPostMinimalAd %}
 
       <div class="container articulo content">
+
+        {{ content | safe }}
+
+        {% bottomContentPostMinimalAd %}
+
+      </div>
+
+    </section>
+
+
 <h3>incl: service-post</h3>
-
-
-
-
 <ul>
   {%- for post in collections.postsFolder %}
   <li>
@@ -59,14 +50,6 @@ title: Service Detail page
   </li>
   {%- endfor %}
 </ul>
-
-        {{ content | safe }}
-
-        {% bottomContentPostMinimalAd %}
-
-      </div>
-
-    </section>
 
 
     {% include "footer.njk" %}
