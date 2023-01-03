@@ -1,7 +1,9 @@
 ---
+eleventyNavigation:
+  key: Services
+  title: Services
 layout: services-landing.njk
 title: Services
-eleventyExcludeFromCollections: true
 ---
 
 # {{ title }}

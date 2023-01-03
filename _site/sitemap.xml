@@ -3,6 +3,14 @@
     
        
         <url>
+            <loc>https://once-eleventy.netlify.app/about/</loc>
+            <lastmod>2021-12-24T12:41:03.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
             <loc>https://once-eleventy.netlify.app/blog01/</loc>
             <lastmod>2022-09-15T00:00:00.000Z</lastmod>
             <changefreq>monthly</changefreq>
@@ -27,16 +35,16 @@
     
        
         <url>
-            <loc>https://once-eleventy.netlify.app/services/repair-and-maintenance/</loc>
-            <lastmod>2022-12-26T16:43:22.000Z</lastmod>
+            <loc>https://once-eleventy.netlify.app/services/</loc>
+            <lastmod>2022-12-26T16:40:44.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         
     
        
         <url>
-            <loc>https://once-eleventy.netlify.app/services/service-2/</loc>
-            <lastmod>2022-12-26T17:25:19.000Z</lastmod>
+            <loc>https://once-eleventy.netlify.app/services2/</loc>
+            <lastmod>2022-12-26T16:40:44.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         
@@ -75,8 +83,144 @@
     
        
         <url>
+            <loc>https://once-eleventy.netlify.app/services/performance-upgrades-12/</loc>
+            <lastmod>2022-12-30T02:17:18.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
             <loc>https://once-eleventy.netlify.app/services/performance-upgrades/</loc>
             <lastmod>2022-12-30T02:17:18.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/car-audio-alarms/</loc>
+            <lastmod>2023-01-02T23:43:50.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/detailing/</loc>
+            <lastmod>2023-01-02T23:43:50.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/repair-maintenance/</loc>
+            <lastmod>2023-01-02T23:43:50.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_carAudio/carAudio01/</loc>
+            <lastmod>2023-01-03T16:16:46.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_customFabrication/customFabrication01/</loc>
+            <lastmod>2023-01-03T16:16:46.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_detailing/detailing01/</loc>
+            <lastmod>2023-01-03T16:16:46.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_repairMaintenance/repairMaintenance01/</loc>
+            <lastmod>2023-01-03T16:16:46.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_repairMaintenance/repairMaintenance02/</loc>
+            <lastmod>2023-01-03T16:16:46.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_servicesCont/s1-1/</loc>
+            <lastmod>2023-01-03T16:16:46.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_servicesCont/s1-2/</loc>
+            <lastmod>2023-01-03T16:16:46.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_servicesCont/s1-3/</loc>
+            <lastmod>2023-01-03T16:16:46.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_servicesCont/s1-4/</loc>
+            <lastmod>2023-01-03T16:16:46.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_repairMaintenance/repairMaintenance03/</loc>
+            <lastmod>2023-01-03T19:00:47.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_repairMaintenance/repairMaintenance04/</loc>
+            <lastmod>2023-01-03T19:01:50.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_carAudio/carAudio02/</loc>
+            <lastmod>2023-01-03T19:20:37.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
+            <loc>https://once-eleventy.netlify.app/services/_detailing/detailing02/</loc>
+            <lastmod>2023-01-03T19:20:37.000Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         

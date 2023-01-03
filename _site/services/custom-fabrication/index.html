@@ -31,6 +31,7 @@
 
     <nav id="main-navbar" class="navbar is-spaced has-background-dark" role="navigation" aria-label="main navigation">
   <div class="container">
+
     <div class="navbar-brand">
       <a role="button" class="navbar-burger ml-0" aria-label="menu" aria-expanded="false" data-target="mobile-navbar">
         <span aria-hidden="true"></span>
@@ -38,79 +39,58 @@
         <span aria-hidden="true"></span>
       </a>
       <a class="navbar-item" href="/">
-        
-          
           <img src="../../_images/driven_white.svg" alt="Driven Garage"/>
-        
       </a>
       <a id="share-mobile" href="#" class="navbar-item is-hidden-desktop ml-auto mr-2" aria-label="share button for mobile">
         <span class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="currentColor"><path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/></g></svg>
         </span>
       </a>
-      
-        <div id="search-mobile" class="navbar-item is-hidden-desktop mr-3">
-          <a style="display:none;" role="button" aria-label="search" class="search-icon icon">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M16.325 14.899l5.38 5.38a1.008 1.008 0 0 1-1.427 1.426l-5.38-5.38a8 8 0 1 1 1.426-1.426zM10 16a6 6 0 1 0 0-12a6 6 0 0 0 0 12z" fill="#414141" fill-rule="evenodd"/></svg>
-          </a>
-        </div>
-      
-    </div>
+    </div><!-- END navbar-brand -->
 
     <div id="mobile-navbar" class="navbar-menu">
 
+  
       
-      <div class="navbar-end">
-
-        
-            <a class="navbar-item navigation-item" href="../../services/"><span>Services</span></a>
-        
-            <a class="navbar-item navigation-item" href="../../projects/"><span>Projects</span></a>
-        
-            <a class="navbar-item navigation-item" href="../../about/"><span>About</span></a>
-        
-            <a class="navbar-item navigation-item" href="../../shop/"><span>Speed Shop</span></a>
-        
-            <a class="navbar-item navigation-item" href="../../#"><span>Contact</span></a>
-        
-
-        
-<!--        
-          <div class="navbar-item">
-            <div class="buttons">
-              
-                <a class="button is-small is-danger" href="about">Suscribe</a>
-              
-            </div>
-          </div>
--->          
-        
-
-        
-<!--        
-          <div class="navbar-item is-hidden-touch">
-            <a role="button" aria-label="search" class="search-icon icon">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M16.325 14.899l5.38 5.38a1.008 1.008 0 0 1-1.427 1.426l-5.38-5.38a8 8 0 1 1 1.426-1.426zM10 16a6 6 0 1 0 0-12a6 6 0 0 0 0 12z" fill="#414141" fill-rule="evenodd"/></svg>
-            </a>
-          </div>
--->           
-        
-
-      </div>
       
+      <div class="navbar-end" role="list">
+        
+          <div class="navbar-item navigation-item has-dropdown">
+            <a class="navbar-link"><span>Services</span></a>
+            
+            <div class="navbar-dropdown">
+        
+          <a class="navbar-item navigation-item" href="/services/repair-maintenance/"><span>Repair &amp; Maintenance</span></a>
+        
+          <a class="navbar-item navigation-item" href="/services/performance-upgrades/"><span>Performance Upgrades</span></a>
+        
+          <a class="navbar-item navigation-item" href="/services/body-paint-metalwork/"><span>Body, Paint &amp; Metalwork</span></a>
+        
+          <a class="navbar-item navigation-item" href="/services/custom-fabrication/" aria-current="page" ><span>Custom Fabrication</span></a>
+        
+          <a class="navbar-item navigation-item" href="/services/car-audio-alarms/"><span>Car Audio and Alarms</span></a>
+        
+          <a class="navbar-item navigation-item" href="/services/detailing/"><span>Detailing</span></a></div><!-- END navbar-dropdown -->
+          </div><!-- END navbar-item has-dropdown -->
+        
+        
+          <a class="navbar-item navigation-item" href="/projects/"><span>Projects</span></a>
+        
+          <a class="navbar-item navigation-item" href="/about/"><span>About</span></a>
+        
+          <a class="navbar-item navigation-item" href="/shop/"><span>Speed Shop</span></a></div>
 
+    </div><!-- END mobile-navbar -->
 
-    </div>
   </div>
 </nav>
-
 
         <section class="hero-services">
         <div class="halftone-overlay"></div>
         <div class="sec-bkg-img">
 
         
-          <img src="../..//_images/Exhaust_custom_stainless.jpg" alt="Custom Fabrication" style="margin-top: -24%; object-position: 0px -440px;">
+          <img src="../../_images/Exhaust_custom_stainless.jpg" alt="Exhaust custom builr stainless steel" style="margin-top: -48%;">
         
 
         </div>
@@ -124,8 +104,8 @@
 
     <section class="projects">
         <div class="container">
-          <h2>Custom Build Solutions</h2>
-          <h3>Every build is infused with our blood and sweat. Taming metal and tuning performace.</h3>
+          <h2>Build Up your Ride</h2>
+          <h3>Proper maintenance of your classic car help avoid nasty and expensive problems down the road. Aggressive and consistent maintenance is the best way to ensure your car will be ready when you want to drive, and that you don&#39;t get surprised with unexpected failures. Your car is special - this much you know. What you may not know is that your classic may need special services and additives to keep it running at peak performance.</h3>
         </div>
       
         <div class="body-full">
@@ -208,7 +188,7 @@
                 <div class="container">
                     <div class="columns">
                         <div class="column is-one-third">
-                            <h1 class="title">Custom Fabrication</h1>
+                            <h1 class="title">Complete Custom Fabrication services We Offer</h1>
                         </div>
                         <div class="column is-two-third">
                             <div>
@@ -242,30 +222,129 @@
 
 
 
+<section class="services related">
+  <div class="container">
+    <h2>All Our Services</h2>
+  </div>
+
+  <div class="container">
+    <div class="columns is-multiline">
+<!-- START loop -->
+    
+      <div class="column is-one-fifth">
+        <div class="feat-item-over">
+          <a href="/services/body-paint-metalwork/"></a>
+          <img src="../../_images/55buick-6220.jpg" alt="55 Buick three-quarters" loading="lazy">
+          <div class="item__overlay">
+            <div class="card-halftone-overlay"></div>
+            <h3 aria-hidden="true">Body, Paint &amp; Metalwork</h3>
+            <div class="item__body">
+              <ul><li>Paint and body</li><li>Classic Car collision repair</li><li>Insurance work on custom / Classic cars</li><li>Metalwork / Rust repair</li><li>Custom paint</li>
+              </ul>
+              <div class="control">
+                <a href="#" target="_self">click for more
+                  <img src="../../_images/i-link-arr.png" alt="Link to more">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- END column 1 -->
+    
+    
+    
+      <div class="column is-one-fifth">
+        <div class="feat-item-over">
+          <a href="/services/performance-upgrades/"></a>
+          <img src="../..//_images/67_Camaro01.jpg" alt="" loading="lazy">
+          <div class="item__overlay">
+            <div class="card-halftone-overlay"></div>
+            <h3 aria-hidden="true">Performance Upgrades</h3>
+            <div class="item__body">
+              <ul><li>Engine swaps</li><li>EFI conversions</li><li>Brake Upgrades</li><li>Power Steering Conversions</li><li>Suspension upgrades</li><li>Transmission swaps</li>
+              </ul>
+              <div class="control">
+                <a href="#" target="_self">click for more
+                  <img src="../../_images/i-link-arr.png" alt="Link to more">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- END column 1 -->
+    
+    
+      <div class="column is-one-fifth">
+        <div class="feat-item-over">
+          <a href="/services/car-audio-alarms/"></a>
+          <img src="../../_images/70_Mustang03_radio.jpg" alt="70 Mustang03 radio" loading="lazy">
+          <div class="item__overlay">
+            <div class="card-halftone-overlay"></div>
+            <h3 aria-hidden="true">Car Audio and Alarms</h3>
+            <div class="item__body">
+              <ul><li>Classic car stereo installs</li><li>High end audio</li><li>Alarms with tracking</li><li>Immobilization devices</li>
+              </ul>
+              <div class="control">
+                <a href="#" target="_self">click for more
+                  <img src="../../_images/i-link-arr.png" alt="Link to more">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- END column 1 -->
+    
+    
+      <div class="column is-one-fifth">
+        <div class="feat-item-over">
+          <a href="/services/detailing/"></a>
+          <img src="../../_images/68_Dart_pinstripe.jpg" alt="68 Dart pinstripe" loading="lazy">
+          <div class="item__overlay">
+            <div class="card-halftone-overlay"></div>
+            <h3 aria-hidden="true">Detailing</h3>
+            <div class="item__body">
+              <ul><li>Paint Correction</li><li>Ceramic coating</li>
+              </ul>
+              <div class="control">
+                <a href="#" target="_self">click for more
+                  <img src="../../_images/i-link-arr.png" alt="Link to more">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- END column 1 -->
+    
+    
+      <div class="column is-one-fifth">
+        <div class="feat-item-over">
+          <a href="/services/repair-maintenance/"></a>
+          <img src="../../_images/65_Mustang_quick_service.jpg" alt="65 Mustang quick service" loading="lazy">
+          <div class="item__overlay">
+            <div class="card-halftone-overlay"></div>
+            <h3 aria-hidden="true">Repair &amp; Maintenance</h3>
+            <div class="item__body">
+              <ul><li>General repair</li><li>Classic car oil changes</li><li>Carb tuning and timing</li><li>Pre-Purchase inspections</li><li>Get it running</li><li>Electrical Repair</li>
+              </ul>
+              <div class="control">
+                <a href="#" target="_self">click for more
+                  <img src="../../_images/i-link-arr.png" alt="Link to more">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- END column 1 -->
+    
+
+<!-- END loop -->
+  </div><!-- END  columns -->
 
 
 
+  </div>
+</section>
 
-
-
-    <h3>incl: service-post</h3>
-<ul>
-  <li>
-  <a href="/services/body-paint-metalwork/">
-  Body, Paint &amp; Metalwork
-  </a>
-  </li>
-  <li>
-  <a href="/services/service-2/">
-  Service 2
-  </a>
-  </li>
-  <li>
-  <a href="/services/repair-and-maintenance/">
-  Repair &amp; Maintenance
-  </a>
-  </li>
-</ul>
 
 
     <footer class="section has-background-dark has-text-white">
@@ -384,6 +463,31 @@
 <script src="../../_js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
 
 <script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.has-dropdown'), 0);
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+
+  });
+
+
+
 
   document.addEventListener('DOMContentLoaded', () => {
   // Functions to open and close a modal

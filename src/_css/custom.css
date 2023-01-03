@@ -46,10 +46,12 @@ body {
 }
 .navigation-item {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-a.navbar-item:hover {
+a.navbar-item:hover,
+.navbar-item.has-dropdown:hover .navbar-link {
   background-color: #f79837;
 
 }
@@ -59,12 +61,19 @@ a.navbar-item:hover {
 /* COLORS */
 
 /* NAV */
-a.navbar-item span, 
+/* Very Light Grey */
+a.navbar-link, 
+.navbar-end > a.navbar-item span, 
+.navbar-link:hover, 
 section.services .item__body .control a {
   color: #dbdbdb;
 }
 
+
+
 /* Alloy ORANGE Primary color */
+.navbar-dropdown a.navbar-item:hover span,
+.navbar-dropdown a.navbar-item:hover, 
 .hero.is-primary .title,
 .hero.is-primary .title-sm,
 a.effect-zoom h3,
@@ -77,6 +86,8 @@ section.services-listing .title {
   color: #f79837;
 }
 
+.navbar-link:hover, 
+a.navbar-item:focus-within, 
 .control .button.is-primary,
 section.feat-story .control .button.is-primary,
 .bkg-stripe.primary,
@@ -84,6 +95,16 @@ section.feat-story .control .button.is-primary,
 .modal-close::before, .modal-close::after {
   background-color: #f79837;
 }
+.navbar-item.has-dropdown.is-active .navbar-link,
+.navbar-item.has-dropdown.is-active .navbar-link:hover {
+  background-color: #f79837!important;
+}
+
+.navbar-link:not(.is-arrowless)::after, 
+.navbar-end .navbar-item:hover .navbar-link:not(.is-arrowless)::after {
+  border-color: #f79837;
+}
+
 section.feat-story .control .button.is-primary:hover {
   background-color: rgb(100, 100, 100);
 }
@@ -96,7 +117,7 @@ section.feat-story,
 .header-full {
   background-color: #363636!important;
 }
-
+.navbar-dropdown .navbar-item, 
 section.services h2,
 section.projects h2,
 section.blog-cards h2 {
@@ -114,8 +135,10 @@ section.shop-slider .container.story-body p {
   color: #ffffff;
 }
 
-
-.navbar-end a.navbar-item:hover, 
+/* .navbar-end .navbar-item.has-dropdown a.navbar-link:hover,  */
+.navbar-end > a.navbar-item:hover, 
+.navbar-end > .navbar-item:hover, 
+.navbar-end .navbar-item.has-dropdown.is-active, 
 .button.is-primary.slant {
   transform: skew(-24deg);
 } 
@@ -123,7 +146,10 @@ section.shop-slider .container.story-body p {
   margin: 0 0 0 2rem;
 }
 .button.is-primary.slant h4, 
-.navbar-end a.navbar-item:hover span {
+.navbar-end a.navbar-item:hover span,
+.navbar-end .navbar-item:hover span, 
+.navbar-end .navbar-item.has-dropdown.is-active span, 
+.navbar-end .navbar-item:hover .navbar-link:not(.is-arrowless)::after {
   transform: skew(24deg);
 }
 
@@ -134,7 +160,8 @@ section.services h2,
 .header-full h3,  /* section.header-full */
 section.projects h2,
 section.carousel h2,
-section.blog-cards h2 {
+section.blog-cards h2,
+section.services.related h2 {
   font-size: 3rem;
   font-weight: 700;
 }
@@ -280,7 +307,7 @@ section.services .container:nth-child(1) > h3 {
   position: relative;
   height: 19rem;
   background-color: lightGrey;
-  overflow-y: hidden;
+  overflow: hidden;
   box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
 }
 .feat-item-over h3 {
@@ -293,6 +320,9 @@ section.services .container:nth-child(1) > h3 {
   text-transform: uppercase;
   transform: translate3d(0, -100%, 0);
   transition: transform 300ms;
+}
+section.services.related .feat-item-over h3 {
+  font-size: 1.0rem;
 }
 
 .feat-item-over a {
@@ -382,6 +412,9 @@ section.services .feat-item-over a:hover ~ img {
   color: #fff;
   font-size: 1.06rem;
   font-weight: 500;
+}
+section.services.related .item__body li {
+  font-size: 0.9rem;
 }
 .item__body ul ul li {
   font-size: 0.9rem;
@@ -477,12 +510,59 @@ section.services-listing .container.perf-long ul ul li {
   color: #000;
 }
 
+/* SERVICE Detail page slider */
+body.service-detail .slider-cont {
+  width: 820px;
+  height: 544px;
+}
+body.service-detail .slider-cont .slide-box {
+  position: relative;
+  height: 540px;
+  background-color: #f79837;
+  overflow-y: hidden;
+}
 
 
+/* SERVICE Detail page contained list */
+.container.feat-layout {
+  margin: 0 auto 6rem auto;
+}
+.feat-body {
+  margin: 4rem 2rem 0 0;
+  padding: 1.4rem;
+  background-color: #363636;
+  color: #fff;
+}
+.feat-body h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #f79837;
+}
+.feat-over {
+  min-height: 12rem;
+  z-index: 8;
+}
+.feat-layout figure img {
+  max-height: 544px;
+}
 
+.feat-body .cta-bar h3 {
+  margin: 1rem 0 0 4.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
-
-
+/* SERVICE Detail page reladed cards */
+section.services.related .feat-item-over {
+  height: 16rem;
+}
+section.services.related .item__body ul {
+  padding: 0;
+}
+section.services.related .item__body li {
+  margin: 0 0 0.4rem 1rem;
+}
 
 /* SHOP-SLIDER section */
 
@@ -520,8 +600,8 @@ section.projects .container .control {
 }
 
 .slide .feat-item-over img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   display: block;
   object-fit: cover;
   transition: transform 300ms;

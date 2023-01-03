@@ -1,8 +1,22 @@
 ---
 title: Custom Fabrication
 tags: ['service']
+eleventyNavigation:
+  key: Custom Fabrication
+  parent: Services
+  order: 4
 description: Driven Garage nothern California restomod auto customization and repair shop
-featuredImage: /_images/Exhaust_custom_stainless.jpg
+introHead: Build Up your Ride
+intro: Proper maintenance of your classic car help avoid nasty and expensive problems down the road. Aggressive and consistent maintenance is the best way to ensure your car will be ready when you want to drive, and that you don't get surprised with unexpected failures. Your car is special - this much you know. What you may not know is that your classic may need special services and additives to keep it running at peak performance.
+featuredImage: _images/Exhaust_custom_stainless.jpg
+featuredImageAlt: "Exhaust custom builr stainless steel"
+featuredImagePos: "margin-top: -48%;"
+collectionName: customFabrication
+mylistfield:
+  - "Exhaust"
+  - "Custom Brackets"
+  - "Custom styling"  
+  - "Suspension"
 ---
 
   {% include "head.njk" %}
@@ -15,10 +29,7 @@ featuredImage: /_images/Exhaust_custom_stainless.jpg
 
 
     <section class="projects">
-        <div class="container">
-          <h2>Custom Build Solutions</h2>
-          <h3>Every build is infused with our blood and sweat. Taming metal and tuning performace.</h3>
-        </div>
+{% include "service-page-intro.njk" %}
       
         <div class="body-full">
           <div class="bkg-stripe primary">
@@ -100,7 +111,7 @@ featuredImage: /_images/Exhaust_custom_stainless.jpg
                 <div class="container">
                     <div class="columns">
                         <div class="column is-one-third">
-                            <h1 class="title">Custom Fabrication</h1>
+                            <h1 class="title">Complete Custom Fabrication services We Offer</h1>
                         </div>
                         <div class="column is-two-third">
                             <div>
@@ -134,22 +145,8 @@ featuredImage: /_images/Exhaust_custom_stainless.jpg
 
 
 
+{% include "services-related.njk" %}
 
-
-
-
-
-
-    <h3>incl: service-post</h3>
-<ul>
-  {%- for post in collections.postsFolder %}
-  <li>
-  <a href="{{ post.url }}">
-  {{ post.data.title }}
-  </a>
-  </li>
-  {%- endfor %}
-</ul>
 
 
     {% include "footer.njk" %}

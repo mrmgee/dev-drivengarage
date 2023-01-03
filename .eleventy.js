@@ -1,10 +1,13 @@
 module.exports = function (eleventyConfig) {
     // Carpetas que añade directamente al directorio de salida
     // eleventyConfig.addPassthroughCopy("src/_css");
+    const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPassthroughCopy("src/_images");
     eleventyConfig.addPassthroughCopy("src/_js");
     eleventyConfig.addPassthroughCopy("src/_css/swiffy-slider.min.css");
     eleventyConfig.addPassthroughCopy("htaccess");
+    
 
     // Create links to all pages in dir
     eleventyConfig.addCollection("postsFolder", function(collectionApi) {
@@ -13,6 +16,20 @@ module.exports = function (eleventyConfig) {
             return b.date - a.date; // sort by date - descending
         });
     });
+
+
+
+
+    // Custom collection
+    eleventyConfig.addCollection('tagsList', (collectionApi) => {
+        const tagsSet = new Set()
+        collectionApi.getAll().forEach((item) => {
+          if (!item.data.tags) return
+          item.data.tags.forEach((tag) => tagsSet.add(tag))
+        })
+        return tagsSet
+      })
+
 
     /* --- ADS --- */
     eleventyConfig.addNunjucksShortcode("topIndexAd", function() {
@@ -100,11 +117,18 @@ module.exports = function (eleventyConfig) {
         });
     });
 
-    eleventyConfig.addCollection("blog", function(collectionApi) {
-        return collectionApi.getAll().sort(function(a, b) {
-          return b.date - a.date;
-        });
+
+
+    // Get only content that matches a tag
+    eleventyConfig.addCollection("myPosts", function(collectionApi) {
+        return collectionApi.getFilteredByTag("blog").sort(function(a, b) {
+            return b.date - a.date;
+          });
     });
+
+
+
+
 
     // Artículos relacionados  - related
     eleventyConfig.addFilter('relacionados', function(collection, etiquetas, path, limite) {

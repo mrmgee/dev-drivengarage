@@ -1,7 +1,10 @@
 ---
 layout: post-minimal.njk
 title: About
-eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: About
+  title: About
+  order: 3
 ---
 
 # {{ title }}
