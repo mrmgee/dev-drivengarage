@@ -82,7 +82,8 @@ a.effect-zoom h3,
 section.carousel h2,
 .cta-bar h3,
 section.hero-services .title,
-section.services-listing .title {
+section.services-listing .title, 
+section.project-slider .carousel-cont h3 {
   color: #f79837;
 }
 
@@ -123,6 +124,14 @@ section.projects h2,
 section.blog-cards h2 {
   color: #363636;
 }
+section .container .column ul li {
+  color: #000;
+}
+section.hero-project .container .column ul li, 
+section.project-slider .carousel-cont h4 {
+  color: #4a4a4a;
+}
+
 
 a.navbar-item:hover span, 
 .hero.is-primary,
@@ -193,7 +202,12 @@ section.shop-slider  .container.story-body h3,
   margin: 0 0 2rem 0;
   padding: 1rem 2rem;
 }
+section.hero-project .container .column ul li {
+  font-weight: 400;
+}
 section.projects .body-full h3,
+section.hero-project .body-full h3,
+section.project-slider .carousel-cont h3,
 section.services-listing .title {
   font-size: 2rem;
   font-weight: 500;
@@ -202,7 +216,11 @@ section.feat-story p, section.projects h4 {
   font-size: 1.2rem;
   font-weight: 600;
 }
-
+section.project-slider .carousel-cont h4 {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.24rem;
+}
 h4.cta-tag {
   margin: 1rem 0 0 0.8rem;
   font-size: 1.2rem;
@@ -217,12 +235,18 @@ a.navbar-item span {
   font-weight: 500;
 }
 
-section.projects p:nth-child(1) {
+section.projects p:nth-child(1), 
+section.hero-project p:nth-child(1) {
   margin-top: 8rem;
 }
-section.projects p {
+section.projects p, 
+section.hero-project p {
   margin: 0 0 1rem 0;
   font-size: 1.2rem;
+}
+section.project-slider .carousel-cont p {
+  margin: 0 0 1rem 0;
+  line-height: 1.6rem;
 }
 
 /* SECTION SPACING */
@@ -242,7 +266,9 @@ section.carousel {
   top: 0;
   left: 0;
 }
-section.projects .bkg-stripe {
+section.projects .bkg-stripe, 
+section.hero-project .bkg-stripe {
+  min-height: 3rem;
   margin: 4rem 0 0 0;
   padding: 0.2rem 0 0.2rem 0;
 }
@@ -250,6 +276,39 @@ section.projects .halftone-overlay {
   max-height: 6.2rem;
   margin-top: 6rem;
   background-position-y: -116px;
+}
+
+
+/* LIST STYLING */
+section .container .column li {
+  margin: 0 0 0 2rem;
+  color: #f79837;
+  font-size: 1.06rem;
+  font-weight: 500;
+}
+section .container .column ul li {
+  font-size: 1.2rem;
+}
+section.services-listing .container .column ul li::before, 
+section.project-slider ul.slider-container .carousel-cont li::before {
+  content: "\2022";
+  color: #f79837;
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+}
+
+
+.col-left-cont.performance-list ul ul {
+  margin: 0.2rem 0 1rem 0;
+}
+.col-left-cont.performance-list ul ul li {
+  font-size: 0.9rem;
+  color: #000;
+}
+.col-left-cont.performance-list ul ul li::before {
+  color: #000;
 }
 
 
@@ -607,7 +666,7 @@ section.projects .container .control {
   transition: transform 300ms;
 }
 
-.slide-box {
+section.shop-slider .slide-box {
   position: relative;
   height: 19rem;
   background-color: lightGrey;
@@ -995,7 +1054,8 @@ section.feat-story {
   padding: 0 0 1rem 0;
 }
 section.feat-story .container,
-section.projects .container {
+section.projects .container,
+section.hero-project .container {
   z-index: 4;
 }
 
@@ -1008,7 +1068,7 @@ section.feat-story .control {
 .body-full {
   width: 100%;
   position: relative;
-  min-height: 400px;
+  /* min-height: 400px; */
 }
 /*
 section.feat-story .body-full .container {
@@ -1038,6 +1098,44 @@ section.blog-cards > .container:nth-child(1) {
 }
 section.projects .body-full h3 {
   margin: 0 0 0 42rem;
+}
+section.hero-project .body-full h3 {
+  margin: 3.2rem 0 2rem 0;
+}
+section.project-slider .carousel-cont h3 {
+  margin: 0 0 3rem 0;
+}
+
+
+/*
+* PROJECT DETAIL SECTION
+*/
+
+section.hero-project {
+  margin-top: 3rem;
+}
+section.hero-project .container .column ul {
+  margin: 0;
+}
+
+section.project-slider .carousel-cont {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  margin: 0 0.5rem;
+  padding: 1.4rem;
+  /* min-height: 19rem; */
+  /* background-color: #eeeeee; */
+}
+
+.slide-box .carousel-cont ul {
+  margin: 0.4rem 0 4rem 0;
+  padding: 0 0 0 1rem;
+  list-style: none;
+}
+.slide-box .carousel-cont ul li {
+  margin: 0 0 0 2rem;
+  font-size: 1.2rem;
 }
 
 
@@ -1090,7 +1188,7 @@ section.carousel .halftone-overlay {
 
 /* sec-bkg-img */
 
-.carousel-cont {
+section.carousel .carousel-cont {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

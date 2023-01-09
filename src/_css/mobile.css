@@ -8,6 +8,10 @@
         padding-left: .75rem;
         padding-right: .75rem;
     }
+    .navbar-end>.navbar-item:hover, 
+    .navbar-end .navbar-item.has-dropdown.is-active {
+        transform: skew(0);
+    }
 
 /* HERO */
     .hero.is-primary {
@@ -163,6 +167,33 @@
         padding: 3rem 0 0 0;
     }
 
+/* SERVICES landing page */    
+    section.hero-project .body-full h3 {
+        margin: 0 0 1rem 0;
+        background-color: #f79837;
+    }
+    section.project-slider .carousel-cont h3 {
+        margin: 0 0 0.8rem 0;
+    }
+    section.project-slider .carousel-cont p {
+        font-size: 0.94rem;
+    }
+
+/*
+* PROJECT DETAIL SECTION
+*/
+    section.project-slider .slide-box .carousel-cont h3 {
+        margin: 0 0 0.6rem 0;
+        line-height: 1.8rem;
+    }
+    section.project-slider .slide-box .columns > .column:nth-child(1) > .carousel-cont h4 {
+        margin: 0.4rem 0 0.4rem 0;
+    }
+    section.project-slider .slide-box  .carousel-cont h4 {
+        margin: 0 0 0.4rem 0;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+      }
 
 
 }

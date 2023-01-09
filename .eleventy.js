@@ -1,13 +1,162 @@
+const path = require("path");
+const Image = require('@11ty/eleventy-img');
+
+const imageShortcode = async (
+  src,
+  alt,
+  poscord,
+  className = undefined,
+  widths = [400, 800, 1280],
+  formats = ['webp', 'jpeg'],
+  sizes = '100vw'
+) => {
+    const imageMetadata = await Image(src, {
+        widths: [...widths, null],
+        formats: [...formats, null],
+        filenameFormat: function (hash, src, width, format, options) {
+            const { name } = path.parse(src);
+            return `${name}-${width}.${format}`;
+        },
+        outputDir: '_site/assets/images',
+        urlPath: '/assets/images',
+      });
+
+      const imageAttributes = {
+        style: poscord,
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async",
+      };
+    
+      return Image.generateHTML(imageMetadata, imageAttributes);
+};
+
+
+
+// gallery shortcode function
+const sharp = require('sharp');
+
+
+const GALLERY_IMAGE_WIDTH = 400;
+const LANDSCAPE_LIGHTBOX_IMAGE_WIDTH = 1200;   //orig 2000 width
+const PORTRAIT_LIGHTBOX_IMAGE_WIDTH = 720;
+
+async function galleryImageShortcode(src, alt) {
+    let lightboxImageWidth = LANDSCAPE_LIGHTBOX_IMAGE_WIDTH;
+
+    const metadata = await sharp(src).metadata();
+    if (metadata.orientation > 1) {
+        console.log('Rotated image detected:', src, metadata.orientation);
+        await sharp(src).rotate().toFile(`correct/${src.split("/").pop()}`);
+    }
+
+    if(metadata.height > metadata.width) {
+        lightboxImageWidth = PORTRAIT_LIGHTBOX_IMAGE_WIDTH;
+    }
+
+    const options = {
+        formats: ['jpeg'],
+        widths: [GALLERY_IMAGE_WIDTH, lightboxImageWidth],
+        filenameFormat: function (hash, src, widths, formats, options) {
+            const { name } = path.parse(src);
+            return `${name}-${widths}.${formats}`;
+        },
+        urlPath: "/gallery/",
+        outputDir: './_site/gallery/'
+    }
+
+    const genMetadata = await Image(src, options);
+
+    return `
+        <a class="myClass12" href="${genMetadata.jpeg[1].url}" 
+        data-pswp-width="${genMetadata.jpeg[1].width}" 
+        data-pswp-height="${genMetadata.jpeg[1].height}" 
+        target="_blank">
+            <img src="${genMetadata.jpeg[0].url}" alt="${alt}" />
+            <span class="hidden-caption-content">${alt}</span>
+            <div class="control">
+              <img src="/_images/i-link-arr.png" alt="Link to more">
+            </div>
+        </a>
+    `.replace(/(\r\n|\n|\r)/gm, "");;
+}
+
+
+
+
+// gallery shortcode
+function galleryShortcode(content, name) {
+    return `
+            <div class="gallery container" id="gallery-${name}">
+                <div class="columns is-multiline">
+                ${content}
+                </div><!-- END columns -->
+            </div>
+            <script type="module">
+            import PhotoSwipeLightbox from '/_js/photoswipe-lightbox.esm.js';
+            const options = {
+              gallery:'#gallery-${name}',
+              children:'a',
+              pswpModule: () => import('/_js/photoswipe.esm.js')
+            };
+            const lightbox = new PhotoSwipeLightbox(options);
+            lightbox.on('uiRegister', function() {
+              lightbox.pswp.ui.registerElement({
+                name: 'custom-caption',
+                order: 9,
+                isButton: false,
+                appendTo: 'root',
+                html: 'Caption text',
+                onInit: (el, pswp) => {
+                  lightbox.pswp.on('change', () => {
+                    const currSlideElement = lightbox.pswp.currSlide.data.element;
+                    let captionHTML = '';
+                    if (currSlideElement) {
+                      const hiddenCaption = currSlideElement.querySelector('.hidden-caption-content');
+                      if (hiddenCaption) {
+
+                        captionHTML = hiddenCaption.innerHTML;
+                      } else {
+   
+                        captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+                      }
+                    }
+                    el.innerHTML = captionHTML || '';
+                  });
+                }
+              });
+            });
+            lightbox.init();
+            </script>
+    `.replace(/(\r\n|\n|\r)/gm, "");
+}
+
+
+
+
+
 module.exports = function (eleventyConfig) {
     // Carpetas que añade directamente al directorio de salida
     // eleventyConfig.addPassthroughCopy("src/_css");
     const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+    
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPassthroughCopy("src/_images");
     eleventyConfig.addPassthroughCopy("src/_js");
     eleventyConfig.addPassthroughCopy("src/_css/swiffy-slider.min.css");
     eleventyConfig.addPassthroughCopy("htaccess");
     
+
+    // Install and use PhotoSwipe
+    eleventyConfig.addPassthroughCopy({
+        "./node_modules/photoswipe/dist/photoswipe.esm.js": "/_js/photoswipe.esm.js",
+        "./node_modules/photoswipe/dist/photoswipe-lightbox.esm.js": "/_js/photoswipe-lightbox.esm.js",
+        "./node_modules/photoswipe/dist/photoswipe.css": "/_css/photoswipe.css"
+    });
+
+    // Image plugin and shortcode
+    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
     // Create links to all pages in dir
     eleventyConfig.addCollection("postsFolder", function(collectionApi) {
@@ -17,8 +166,12 @@ module.exports = function (eleventyConfig) {
         });
     });
 
+    // gallery and shortcode   
+    eleventyConfig.addPairedNunjucksShortcode('gallery', galleryShortcode);
+    eleventyConfig.addNunjucksAsyncShortcode('galleryImage', galleryImageShortcode);
 
 
+    
 
     // Custom collection
     eleventyConfig.addCollection('tagsList', (collectionApi) => {

@@ -16,11 +16,11 @@
 <link href="../_css/sticky.css" rel="stylesheet">
 <link href="../_css/cfaccordion-style.css" rel="stylesheet">
 
-
-
 <!-- Swiffy Slider -->
-<link href="../_css/swiffy-slider.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../_css/swiffy-slider.min.css">
 
+<!-- PhotoSwipe gallery -->
+<link rel="stylesheet" href="../_css/photoswipe.css">
 
     
 
@@ -74,7 +74,18 @@
           </div><!-- END navbar-item has-dropdown -->
         
         
-          <a class="navbar-item navigation-item" href="/projects/" aria-current="page" ><span>Projects</span></a>
+          <div class="navbar-item navigation-item has-dropdown">
+            <a class="navbar-link"><span>Projects</span></a>
+            
+            <div class="navbar-dropdown">
+        
+          <a class="navbar-item navigation-item" href="/projects/67-camaro-forsyth/"><span>67 Camaro</span></a>
+        
+          <a class="navbar-item navigation-item" href="/projects/69-barracuda-formula-s/"><span>69 Barracuda Formula S</span></a>
+        
+          <a class="navbar-item navigation-item" href="/projects/74-scout/"><span>74 Scout</span></a></div><!-- END navbar-dropdown -->
+          </div><!-- END navbar-item has-dropdown -->
+        
         
           <a class="navbar-item navigation-item" href="/about/"><span>About</span></a>
         
@@ -103,6 +114,7 @@
 
 
     <section class="projects-body">
+      <h2>here</h2>
        
 
         
@@ -131,7 +143,11 @@
         <div class="container">
           <div class="columns">
             <div class="column">
+              <picture><source type="image/webp" srcset="/assets/images/1967-Chevrolet-Nova-SS-Super-Sport-Butternut-Yellow-400.webp 400w, /assets/images/1967-Chevrolet-Nova-SS-Super-Sport-Butternut-Yellow-650.webp 650w" sizes="100vw"><source type="image/jpeg" srcset="/assets/images/1967-Chevrolet-Nova-SS-Super-Sport-Butternut-Yellow-400.jpeg 400w, /assets/images/1967-Chevrolet-Nova-SS-Super-Sport-Butternut-Yellow-650.jpeg 650w" sizes="100vw"><source type="image/png" srcset="/assets/images/1967-Chevrolet-Nova-SS-Super-Sport-Butternut-Yellow-400.png 400w, /assets/images/1967-Chevrolet-Nova-SS-Super-Sport-Butternut-Yellow-650.png 650w" sizes="100vw"><img style="undefined" alt="1967 Chevrolet Nova SS Super Sport Butternut Yellow" loading="lazy" decoding="async" src="/assets/images/1967-Chevrolet-Nova-SS-Super-Sport-Butternut-Yellow-400.jpeg" width="650" height="454"></picture>
+
+<!--
               <img src="../_images/1967-Chevrolet-Nova-SS-Super-Sport-Butternut-Yellow.png" alt="1967 Chevrolet Nova SS Super Sport Butternut Yellow">
+-->          
             </div>
             <div class="column">
               <!-- <h3>’67 Chevy Nova</h3> -->
@@ -308,6 +324,8 @@
 
 <!-- Swiffy Slider -->
 <script src="../_js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+
+
 
 <script>
 
