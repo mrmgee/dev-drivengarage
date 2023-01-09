@@ -1,7 +1,7 @@
 ---
 title: "Service01 item01 Title"
 author: "Michael Bond"
-image: "_images/Exhaust_custom_stainless.jpg"
+image: "_images/CCS_Welding-8.jpg"
 altTag: "Exhaust custom builr stainless steel"
 rating: 4.5
 buyLink: "/"
