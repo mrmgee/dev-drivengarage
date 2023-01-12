@@ -146,6 +146,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/_js");
     eleventyConfig.addPassthroughCopy("src/_css/swiffy-slider.min.css");
     eleventyConfig.addPassthroughCopy("htaccess");
+
+    // Flaticon icon font
+    eleventyConfig.addPassthroughCopy("src/_css/flaticon/flaticon.css");
     
 
     // Install and use PhotoSwipe

@@ -121,6 +121,8 @@ section.feat-story,
 .navbar-dropdown .navbar-item, 
 section.services h2,
 section.projects h2,
+section.projects-head h2,
+section.projects-head h2,
 section.blog-cards h2 {
   color: #363636;
 }
@@ -128,7 +130,9 @@ section .container .column ul li {
   color: #000;
 }
 section.hero-project .container .column ul li, 
-section.project-slider .carousel-cont h4 {
+section.project-slider .carousel-cont h4, 
+section.project-slider .carousel-cont p, 
+section.project-slider .carousel-cont li {
   color: #4a4a4a;
 }
 
@@ -168,6 +172,7 @@ section.shop-slider .container.story-body p {
 section.services h2,
 .header-full h3,  /* section.header-full */
 section.projects h2,
+section.projects-head h2,
 section.carousel h2,
 section.blog-cards h2,
 section.services.related h2 {
@@ -251,12 +256,15 @@ section.project-slider .carousel-cont p {
 
 /* SECTION SPACING */
 section,
-section.projects,
 section.carousel {
   margin: 0 0 4rem 0;
 }
-
-
+section.projects-head {
+  margin: 3rem 0 1rem 0;
+}
+section.project-slider {
+  margin: 0 0 1rem 0;
+}
 
 /* BKG STRIPES */
 .bkg-stripe {
@@ -312,7 +320,9 @@ section.project-slider ul.slider-container .carousel-cont li::before {
 }
 
 
-
+/* - - - - - - - - - -
+HOME
+- - - - - - - - - - */
 
 /* Hero */
 @media screen and (min-width: 769px) {
@@ -354,6 +364,200 @@ section.hero-services .title {
   position: relative;
   right: 1rem;
 }
+
+
+
+/* PROCESS steps workflow section */
+section.process {
+  margin: 3rem 0 6rem 0;
+}
+
+.process-item {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  /* border: 1px solid #078f46; */
+  background-color: #fafafa;
+}
+.process-item .img-wrap {
+  width: 100%;
+  min-height: 8rem;
+  text-align: center;
+  /* border: 1px solid #12cde9; */
+  background-color: #ffffff;  
+}
+
+.process-item .img-wrap .icon {
+    width: 100%;
+    font-size: 6rem;
+    vertical-align: top;
+    color: #f79837;
+}
+.process-item .img-wrap .icon.i-timesheet img {
+  max-height: 6.2rem;
+  margin: 0.3rem 0 0 0;
+}
+.icon {
+    display: inline-block;
+    line-height: 1;
+}
+.process-item .img-wrap .icon:before {
+    font-size: inherit;
+    margin-left: 0;
+    vertical-align: top;
+}
+.flaticon-car-search:before {
+    content: "\f10b";
+}
+.flaticon-balancing:before {
+    content: "\f106";
+}
+.flaticon-autolift:before {
+    content: "\f104";
+}
+.flaticon-fix-sign:before {
+    content: "\f114";
+}
+.process-item h5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0 0 0.3rem 0;
+  /* text-align: center; */
+  color: #ffffff;
+  background-color: #4a4a4a;
+}
+.process-item h5 span {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0 0 -1.2rem;
+  padding: 0.8rem 1.4rem;
+  color: #ffffff;
+  background: #f79837;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-align: center;
+}
+.process-item p {
+  padding: 0.4rem;
+}
+section.process h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f79837;
+}
+section.process h3 {
+  font-weight: 400;
+  margin: 0 0 2rem 0;
+}
+
+
+
+/* SHOP SLIDER section */
+section.shop-slider {
+  background-color: #000000d9;
+}
+
+.container.story-body {
+    max-width: 1152px!important;
+    background: rgba(0,0,0,.3);
+  }
+
+.slide-cont {
+  position:relative;
+  min-height: 16.4rem;
+  padding: 0 0.75rem 0.75rem 0.75rem;
+}
+.slide-cont-overlay {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(/_images/ai_halftone01.svg) repeat-x;
+}
+.slide-body {
+  position:relative;
+  margin: 0 0.4rem;
+  padding: 0.75rem;
+  background-color: #fff;
+}
+
+.slide .feat-item-over img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 300ms;
+}
+
+.slide-box {
+  position: relative;
+  height: 19rem;
+  background-color: lightGrey;
+  overflow-y: hidden;
+}
+
+.feat-item_overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition: transform 300ms;
+  /* transform: translate3d(0, 100%, 0); */
+}
+.feat-item_overlay_body {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  /* padding: 1rem; */
+  /* opacity: 0; */
+  /* transition: opacity 500ms 100ms; */
+  
+  z-index: 4;
+}
+
+.logo-bkg-stripe {
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(255,255,255,.45);
+}
+
+.feat-item_overlay_body figure {
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+section.shop-slider .slider-nav {
+  z-index: 10;
+
+}
+
+.story-over {
+    position: absolute;
+    width: 100%;
+    padding: 2rem 0 0 0;
+    z-index: 4;
+  }
+
+section.shop-slider .slider-item-helper:not(.slider-item-ratio) .slider-container>* {
+  min-height: 18rem;
+}
+
+.container.story-body p {
+    margin: 0 0 0.01rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+
+
+
+
+
+
 
 
 /* SERVICES */
@@ -1092,7 +1296,6 @@ section.feat-story .halftone-overlay {
 * PROJECTS SECTION
 */
 
-section.projects > .container:nth-child(1),
 section.blog-cards > .container:nth-child(1) {
   margin-bottom: 2rem;
 }
@@ -1117,6 +1320,16 @@ section.hero-project {
 section.hero-project .container .column ul {
   margin: 0;
 }
+section.hero-project picture {
+  display: flex;
+  width: 100%;
+  max-height: 400px;
+}
+section.hero-project picture img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
 section.project-slider .carousel-cont {
   /* display: flex;
@@ -1128,6 +1341,36 @@ section.project-slider .carousel-cont {
   /* background-color: #eeeeee; */
 }
 
+@media screen and (min-width: 769px) {
+  section.project-slider .slide-box {
+    position: relative;
+    height: 32rem;
+    background-color: rgb(248 248 248);
+    overflow-y: hidden;
+  }
+} 
+section.project-slider .carousel-cont {
+  padding: 3rem 5rem 1rem 5rem;
+  /* background-color: rgb(100 100 100 / 1%); */
+  line-height: 2rem;
+}
+section.project-slider .carousel-cont.right {
+  padding: 3rem 5rem 1rem 2rem;
+}
+.slide-box.s01 img {
+  object-position: 0px -70px;
+}
+.slide-box.slide-img-full picture {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+.slide-box.slide-img-full picture img {
+  max-width: 82%;
+  object-fit: contain;
+}
+
 .slide-box .carousel-cont ul {
   margin: 0.4rem 0 4rem 0;
   padding: 0 0 0 1rem;
@@ -1136,6 +1379,51 @@ section.project-slider .carousel-cont {
 .slide-box .carousel-cont ul li {
   margin: 0 0 0 2rem;
   font-size: 1.2rem;
+}
+
+
+
+/*
+* PROJECT DETAIL gallery-project Modal fullscreen caption nav SECTION
+*/
+.pswp__custom-caption {
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  color: #fff;
+  width: calc(100% - 32px);
+  max-width: 400px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+}
+.pswp__custom-caption a {
+  color: #fff;
+  text-decoration: underline;
+}
+.hidden-caption-content {
+  display: none;
+}
+
+
+.gallery.container .column a {
+  position: relative;
+  display: block;
+}
+.gallery.container .column a:hover img {
+  opacity: .4;
+}
+.gallery.container .column a .control {
+  top: 1rem;
+  width: 33px;
+  height: 33px;
+  z-index: 4;
+  display: none;
+}
+.gallery.container .column a:hover .control {
+    display: block;
 }
 
 

@@ -221,121 +221,71 @@ pagination:
 
 
 
-<style>
-section.shop-slider {
-  background-color: #000000d9;
-}
 
-.container.story-body {
-    max-width: 1152px!important;
-    background: rgba(0,0,0,.3);
-  }
 
-.slide-cont {
-  position:relative;
-  min-height: 16.4rem;
-  padding: 0 0.75rem 0.75rem 0.75rem;
-}
-.slide-cont-overlay {
-  position:absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: url(/_images/ai_halftone01.svg) repeat-x;
-}
-.slide-body {
-  position:relative;
-  margin: 0 0.4rem;
-  padding: 0.75rem;
-  background-color: #fff;
-}
+<section class="process">
+  <div class="container">
+    <h2>How We Work</h2>
+    <h3>Getting your car worked on is easier than ever - Here's how you do it</h3>
 
-.slide .feat-item-over img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform 300ms;
-}
+    <div class="columns">
 
-.slide-box {
-  position: relative;
-  height: 19rem;
-  background-color: lightGrey;
-  overflow-y: hidden;
-}
+      <div class="column">
+        <div class="process-item">
+          <div class="img-wrap">
+            <i class="icon flaticon-car-search"></i>
+          </div>
+          <h5><span>1</span> Get a Quote</h5>
+            <p>Tells us what's wrong with your car or work you want done. We'll shoot back a detailed estimate that includes diagnosis, parts, and labor.</p>
+        </div>
+      </div>
 
-.feat-item_overlay {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  transition: transform 300ms;
-  /* transform: translate3d(0, 100%, 0); */
-}
-.feat-item_overlay_body {
-  flex-grow: 1;
-  display: flex;
-  align-items: flex-end;
-  /* padding: 1rem; */
-  /* opacity: 0; */
-  /* transition: opacity 500ms 100ms; */
-  
-  z-index: 4;
-}
+      <div class="column">
+        <div class="process-item">
+          <div class="img-wrap">
+            <i class="icon flaticon-autolift"></i>
+          </div>
+          <h5><span>2</span> Approve Repairs</h5>
+          <p>Once you approve the estimate, we'll book an appoitment to drop off your car and our team will get to work.</p>
+        </div>
+      </div>
 
-.logo-bkg-stripe {
-  width: 100%;
-  margin: 0 auto;
-  background: rgba(255,255,255,.45);
-}
+      <div class="column">
+        <div class="process-item">
+          <div class="img-wrap">
+            <i class="icon i-timesheet">
+              <img src="{{ rootPath }}_images/i-timesheet.svg" alt="timesheet">
+            </i>
+          </div>
+          <h5><span>3</span> Time is Money</h5>
+          <p>Only pay for time our team is working on your car. We use strict time tracking to ensure you won't pay extra. </p>
+        </div>
+      </div>
+      
 
-.feat-item_overlay_body figure {
-  max-width: 220px;
-  margin: 0 auto;
-}
 
-section.shop-slider .slider-nav {
-  z-index: 10;
+      <div class="column">
+        <div class="process-item">
+          <div class="img-wrap">
+            <i class="icon flaticon-fix-sign"></i>
+          </div>
+          <h5><span>4</span> Hit the Road</h5>
+          <p>Our certified team will fix your car and get you back on the road.</p>
+        </div>
+      </div>
 
-}
+    </div>
 
-.story-over {
-    position: absolute;
-    width: 100%;
-    padding: 2rem 0 0 0;
-    z-index: 4;
-  }
 
-section.shop-slider .slider-item-helper:not(.slider-item-ratio) .slider-container>* {
-  min-height: 18rem;
-}
 
-.container.story-body p {
-    margin: 0 0 0.01rem 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
+  </div>
+</section>
 
-@media screen and (max-width: 768px) {
-  .story-over {
-    position: relative;
-  }
-  .container.story-body {
-    padding: 0.4rem;
-    background-color: #363636;
-  }
-  .container.story-body p, .story-over p {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-}
 
-</style>
+
+
+
+
 
 
 <section class="shop-slider">
@@ -452,98 +402,13 @@ section.shop-slider .slider-item-helper:not(.slider-item-ratio) .slider-containe
 </section>
 
 
-
-
-
-
-<section class="projects">
+<section class="projects-head">
   <div class="container">
-<!--    
-    <div class="control">
-      <a href="#" target="_self">
-        <img src="{{ rootPath }}_images/i-link-arr.png" alt="Link to more">
-      </a>
-    </div>
--->
     <h2>Featured Projects</h2>
     <h3>Every build is infused with our blood and sweat. Taming metal and tuning performace.</h3>
   </div>
-
-  <div class="body-full">
-    <div class="bkg-stripe primary">
-      <div class="container">
-        <h3>’67 Chevy Nova</h3>
-      </div>
-    </div>
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <img src="{{ rootPath }}_images/1967-Chevrolet-Nova-SS-Super-Sport-Butternut-Yellow.png" alt="1967 Chevrolet Nova SS Super Sport Butternut Yellow">
-        </div>
-        <div class="column">
-          <!-- <h3>’67 Chevy Nova</h3> -->
-          <p>Tedious work for excellent results is the mark of true craftsmen - and we push our team to do the best they can every time.</p>
-          <p>Fabbed up some finish panels from the core support to grille. It tightened everything up a little.</p>
-          <p>A little extra effort can go a long way!</p>
-        </div>
-      </div><!-- END columns -->
-    </div>
-  </div><!-- END body-full -->
-
-  <div class="body-full">
-    <!-- <div class="halftone-overlay"></div> -->
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <div class="galitem">
-            <figure class="image">
-              <div class="control">
-                <a href="#" target="_self">
-                  <img src="{{ rootPath }}_images/i-link-arr.png" alt="Link to more">
-                </a>
-              </div>
-              <img src="{{ rootPath }}_images/67_Nova_body_gaps02.jpg" alt="67 Nova body gaps">
-            </figure>
-          </div><!-- END galitem -->
-        </div>
-
-        <div class="column">
-          <div class="galitem">
-            <figure class="image">
-              <div class="control">
-                <a href="#" target="_self">
-                  <img src="{{ rootPath }}_images/i-link-arr.png" alt="Link to more">
-                </a>
-              </div>
-              <img src="{{ rootPath }}_images/67_Nova_body03.jpg" alt="67 Nova body gaps">
-            </figure>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="galitem">
-            <figure class="image">
-              <div class="control">
-                <a href="#" target="_self">
-                  <img src="{{ rootPath }}_images/i-link-arr.png" alt="Link to more">
-                </a>
-              </div>
-              <img src="{{ rootPath }}_images/67_Nova_rear_bumper02.jpg" alt="67 Nova body gaps">
-            </figure>
-          </div><!-- END galitem -->
-        </div>
-
-      </div><!-- END columns -->
-    </div><!-- END container -->
-
-  </div><!-- END body-full -->
 </section>
-
-
-
-
-
-
+{% include "b-featured-project.njk" %}
 
 
 

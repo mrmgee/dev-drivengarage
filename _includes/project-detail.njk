@@ -1,92 +1,10 @@
 ---
+layout: base.njk
 title: Driven Garage - Project Detail
 description: Driven Garage nothern California restomod auto customization and repair shop
 featuredImage: /_images/default.jpg
 ---
 
-{% include "head.njk" %}
-
-  <body class="is-flex is-flex-direction-column">
-
-
-{% include "nav.njk" %}
-
-
-<style>
-  section.hero-project picture {
-    display: flex;
-    width: 100%;
-    max-height: 400px;
-  }
-  section.hero-project picture img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-
-
-@media screen and (min-width: 769px) {
-  section.project-slider .slide-box {
-    position: relative;
-    height: 32rem;
-    background-color: rgb(248 248 248);
-    overflow-y: hidden;
-  }
-} 
-section.project-slider .carousel-cont {
-  padding: 3rem 5rem 1rem 5rem;
-  /* background-color: rgb(100 100 100 / 1%); */
-  line-height: 2rem;
-}
-section.project-slider .carousel-cont.right {
-  padding: 3rem 5rem 1rem 2rem;
-}
-.slide-box.s01 img {
-  object-position: 0px -70px;
-}
-.slide-box.slide-img-full picture {
-  display: flex;
-  width: 100%;
-  height: auto;
-  justify-content: center;
-}
-
-.slide-box.slide-img-full picture img {
-  max-width: 82%;
-  object-fit: contain;
-}
-
-@media screen and (max-width: 768px) {
-  section.project-slider {
-    margin: 0.2rem 0 0 0;
-    padding: 0;
-  }
-  section.project-slider .slide-box {
-    min-height: calc(100vh - 160px);
-    /* background-color: #ffffff; */
-    /* background-color: #57c7d4; */
-    overflow: hidden;
-  }
-  section.project-slider .column {
-    padding: 0 0.75rem;
-  }
-  section.project-slider .carousel-cont, 
-  section.project-slider .carousel-cont.right {
-    padding: 0.4rem 0.4rem 0 0.4rem;
-    /* background-color: #ffffff; */
-    line-height: 1.5rem;
-  }
-  section.project-slider .slider-nav {
-    align-items: flex-end;
-    /* margin-bottom: -3rem; */
-  }
-  .slide-box.slide-img-full picture img {
-    max-width: 100%;
-    object-position: 0px 0px!important;
-  }
-}
-</style>
 
 
 <!-- Build slide image position -->
@@ -192,58 +110,12 @@ section.project-slider .carousel-cont.right {
   </div>
 
 
-
 </section>
 
 
 
 
 <section class="gallery-project">
-
-<style>
-.pswp__custom-caption {
-  background: rgba(0, 0, 0, 0.6);
-  font-size: 16px;
-  color: #fff;
-  width: calc(100% - 32px);
-  max-width: 400px;
-  padding: 2px 8px;
-  border-radius: 4px;
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-}
-.pswp__custom-caption a {
-  color: #fff;
-  text-decoration: underline;
-}
-.hidden-caption-content {
-  display: none;
-}
-
-
-.gallery.container .column a {
-  position: relative;
-  display: block;
-}
-.gallery.container .column a:hover img {
-  opacity: .4;
-}
-.gallery.container .column a .control {
-  top: 1rem;
-  width: 33px;
-  height: 33px;
-  z-index: 4;
-  display: none;
-}
-.gallery.container .column a:hover .control {
-    display: block;
-}
-
-</style>
-
-
 
 {% gallery "uzupis" %}
 
@@ -269,9 +141,6 @@ section.project-slider .carousel-cont.right {
 
 
 
-    {% include "footer.njk" %}
-
-
 <script>
         window.addEventListener('load', () => {
             let sliderElement = document.getElementById('infiniteSliding');
@@ -291,8 +160,4 @@ section.project-slider .carousel-cont.right {
             sliderElement.querySelector(".slider-indicators").appendChild(sliderElement.querySelector(".slider-indicators").lastElementChild.cloneNode(true));
             swiffyslider.onSlideEnd(sliderElement, infiniteScrollToFirstWhenOnLast, 90);
         });
-    </script>
-
-  </body>
-
-</html>    
+    </script> 

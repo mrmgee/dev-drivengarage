@@ -94,6 +94,22 @@
     }
 
 
+
+/* SHOP SLIDER section */
+    .story-over {
+        position: relative;
+    }
+    .container.story-body {
+        padding: 0.4rem;
+        background-color: #363636;
+    }
+    .container.story-body p, .story-over p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+
+
 /* SERVICES landing page */
 
     section.is-flex-grow-1  {
@@ -182,6 +198,33 @@
 /*
 * PROJECT DETAIL SECTION
 */
+    section.project-slider {
+      margin: 0.2rem 0 0 0;
+      padding: 0;
+    }
+    section.project-slider .slide-box {
+      min-height: calc(100vh - 160px);
+      /* background-color: #ffffff; */
+      /* background-color: #57c7d4; */
+      overflow: hidden;
+    }
+    section.project-slider .column {
+      padding: 0 0.75rem;
+    }
+    section.project-slider .carousel-cont, 
+    section.project-slider .carousel-cont.right {
+      padding: 0.4rem 0.4rem 0 0.4rem;
+      /* background-color: #ffffff; */
+      line-height: 1.5rem;
+    }
+    section.project-slider .slider-nav {
+      align-items: flex-end;
+      /* margin-bottom: -3rem; */
+    }
+    .slide-box.slide-img-full picture img {
+      max-width: 100%;
+      object-position: 0px 0px!important;
+    }
     section.project-slider .slide-box .carousel-cont h3 {
         margin: 0 0 0.6rem 0;
         line-height: 1.8rem;
