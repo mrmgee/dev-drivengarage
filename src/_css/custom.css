@@ -330,6 +330,9 @@ HOME
     display: flex;
     justify-content: center;
   }
+  body.home section.hero picture img {
+    width: 100%;
+  }
 }
 .hero.is-primary .title {
   display: flex;
@@ -708,9 +711,11 @@ section.hero-services .hero-body {
 section.hero-services .sec-bkg-img {
   max-height: 18rem;
 }
+/*
 section.hero-services .sec-bkg-img img {
   object-position: 0px 240px;
 }
+*/
 section.hero-services .sec-bkg-img::before {
   max-height: 23.6rem;
 }
@@ -1425,6 +1430,22 @@ section.project-slider .carousel-cont.right {
 .gallery.container .column a:hover .control {
     display: block;
 }
+
+
+
+
+
+
+/*
+* ## PROCESS section
+*/
+
+body.p-process section.hero-services {
+  margin: 0;
+}
+
+
+
 
 
 /*

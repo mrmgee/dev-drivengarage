@@ -11,6 +11,7 @@
   {%set fullSlideP = pageSlideP+imgSlideP %}
   {% set imgSlideAlt = item.altText %}
   {% set imgSlidePos = "" %}
+  {% set imgSizesResp = "12" %}
         <li class="slide-visible">
             <a href="{{ collectionNameLink }}">
   {% if item.title|length %}
@@ -34,7 +35,7 @@
 
               <div class="column">
         {% if item.image|length %}
-            {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos %}
+            {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos, ""+imgSizesResp %}
         {% endif %}
               </div>
 
@@ -42,7 +43,7 @@
 
               <div class="column">
         {% if item.image|length %}
-            {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos %}
+            {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos, ""+imgSizesResp %}
         {% endif %}
               </div>
 
@@ -68,7 +69,7 @@
 
           <div class="slide-box s{{ loop.index }} slide-img-full">
     {% if item.image|length %}
-        {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos %}
+        {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos, ""+imgSizesResp %}
     {% endif %}  
           </div>
   {% endif %}
@@ -123,7 +124,7 @@
 
                         </div>
         {% if cont.data.image|length %}
-            {% image ""+fullP, ""+imgAlt, ""+imgSlidePos %}
+            {% image ""+fullP, ""+imgAlt, ""+imgSlidePos, ""+imgSizesResp %}
         {% endif %}
 
                     </figure>

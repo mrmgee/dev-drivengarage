@@ -1,14 +1,17 @@
 const path = require("path");
 const Image = require('@11ty/eleventy-img');
 
+const sizesResp = "(min-width: 930px) 932px, 100vw";
+
 const imageShortcode = async (
   src,
   alt,
-  poscord,
-  className = undefined,
+  classVar,
+  sizesResp,
   widths = [400, 800, 1280],
-  formats = ['webp', 'jpeg'],
-  sizes = '100vw'
+  formats = ['jpeg'],
+  sizes = '(min-width: 768px) 600px, 100vw'
+//   sizes = '(min-width: 930px) 932px, 100vw'
 ) => {
     const imageMetadata = await Image(src, {
         widths: [...widths, null],
@@ -19,17 +22,30 @@ const imageShortcode = async (
         },
         outputDir: '_site/assets/images',
         urlPath: '/assets/images',
+        sizes: sizesResp,
       });
 
-      const imageAttributes = {
-        style: poscord,
-        alt,
-        sizes,
-        loading: "lazy",
-        decoding: "async",
-      };
+      if (classVar === undefined) {
+        imageAttributesTemp = {
+            alt,
+            sizes,
+            loading: "lazy",
+            decoding: "async",
+        };
+      } else {
+         imageAttributesTemp = {
+            class: classVar,
+            alt,
+            sizes,
+            loading: "lazy",
+            decoding: "async",
+        };
+        }
+        imageAttributes = imageAttributesTemp;
+
     
       return Image.generateHTML(imageMetadata, imageAttributes);
+      
 };
 
 

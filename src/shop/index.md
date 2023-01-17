@@ -4,7 +4,7 @@ title: Speed Shop
 eleventyNavigation:
   key: Shop
   title: Speed Shop
-  order: 4
+  order: 5
 description: Driven Garage nothern California restomod auto customization and repair shop
 featuredImage: /_images/69-cuda-10.jpg
 ---

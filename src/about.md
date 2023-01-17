@@ -4,7 +4,7 @@ title: About
 eleventyNavigation:
   key: About
   title: About
-  order: 3
+  order: 4
 ---
 
 # {{ title }}

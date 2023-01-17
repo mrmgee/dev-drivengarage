@@ -1,6 +1,6 @@
 ---
 layout: index_layout.njk
-title: Driven Garage - v2-1
+title: Driven Garage - v2-1-2
 description: Driven Garage nothern California restomod auto customization and repair shop
 eleventyExcludeFromCollections: true
 pagination:
@@ -9,7 +9,24 @@ pagination:
 ---
 
 <section class="hero is-medium is-primary has-background">
+  {%set fullHeroPath = "_images/cameros_half.png" %}
+  {% set heroAlt = "3 generations Cameros" %}
+  {% set heroClassName = "hero-background is-transparent" %}
+  {% set heroSizesResp = "19heroSizesResp" %}
+
+{% if fullHeroPath|length %}
+  {% image ""+fullHeroPath, ""+heroAlt, ""+heroClassName, ""+heroSizesResp %}
+{% endif %}
+
+<!-- 
+heroPath is: {{ heroPath }}
+fullHeroPath is: {{ fullHeroPath }}
+heroAlt is: {{ heroAlt }}
+heroClassName is: {{ heroClassName }}
+
+
   <img class="hero-background is-transparent" src="{{ rootPath }}_images/cameros_half.png" alt="3 generations Cameros" />
+-->  
   <div class="hero-body is-overlay">
     <div class="container">
       <h3 class="subtitle">
@@ -52,7 +69,7 @@ pagination:
       <div class="column is-one-third">
         <div class="feat-item-over">
           <a href="services/repair-and-maintenance/" aria-labelledby="person1"></a>
-          <img src="{{ rootPath }}_images/65_Mustang_quick_service.jpg" alt="65 Mustang quick service" loading="lazy" style="object-position: 0px 0px;">
+            {% image "_images/65_Mustang_quick_service.jpg", "65 Mustang quick service" %}
           <div class="item__overlay">
             <div class="card-halftone-overlay"></div>
             <h3 aria-hidden="true">Repair & Maintenance</h3>
@@ -78,7 +95,7 @@ pagination:
       <div class="column is-one-third">
         <div class="feat-item-over">
           <a href="/services/performance-upgrades" aria-labelledby="person1"></a>
-          <img src="{{ rootPath }}_images/67_Camaro01.jpg" alt="67 Camaro engine" loading="lazy" style="object-position: 0px 0px;">          
+          {% image "_images/67_Camaro01.jpg", "67 Camaro engine" %}
           <div class="item__overlay">
             <div class="card-halftone-overlay"></div>
             <h3 aria-hidden="true">Performance Upgrades</h3>
@@ -109,8 +126,7 @@ pagination:
       <div class="column is-one-third">
         <div class="feat-item-over">
           <a href="services/body-paint-metalwork" aria-labelledby="person1"></a>
-          <img src="{{ rootPath }}_images/55buick-6220.jpg" alt="55 Buick" loading="lazy" style="object-position: 0px 0px;">
-          
+          {% image "_images/55buick-6220.jpg", "55 Buick" %}          
           <div class="item__overlay">
             <div class="card-halftone-overlay"></div>
             <h3 aria-hidden="true">Body, Paint & Metalwork</h3>
@@ -142,7 +158,11 @@ pagination:
       <div class="column is-one-third">
         <div class="feat-item-over">
           <a href="services/custom-fabrication" aria-labelledby="person1"></a>
+          {% image "_images/Exhaust_custom_stainless.jpg", "Exhaust custom stainless" %}
+
+<!--
           <img src="{{ rootPath }}_images/Exhaust_custom_stainless.jpg" alt="Exhaust custom stainless" loading="lazy" style="object-position: 0px -7rem;">
+-->
           <div class="item__overlay">
             <div class="card-halftone-overlay"></div>
             <h3 aria-hidden="true">Custom Fabrication</h3>
@@ -167,7 +187,10 @@ pagination:
       <div class="column is-one-third">
         <div class="feat-item-over">
           <a href="services/car-audio-alarms/"></a>
+          {% image "_images/70_Mustang03_radio.jpg", "70 Mustang03 radio" %}
+<!--
           <img src="{{ rootPath }}_images/70_Mustang03_radio.jpg" alt="70 Mustang03 radio" loading="lazy" style="object-position: 0px 0px; transform: scale(1.3);">
+-->
           <div class="item__overlay">
             <div class="card-halftone-overlay"></div>
             <h3 aria-hidden="true">Car Audio and Alarms</h3>
@@ -192,7 +215,7 @@ pagination:
       <div class="column is-one-third">
         <div class="feat-item-over">
           <a href="services/detailing/"></a>
-          <img src="{{ rootPath }}_images/68_Dart_pinstripe.jpg" alt="68 Dart pinstripe" loading="lazy" style="object-position: 0px 0px;">
+          {% image "_images/68_Dart_pinstripe.jpg", "68 Dart pinstripe" %}
           <div class="item__overlay">
             <div class="card-halftone-overlay"></div>
             <h3 aria-hidden="true">Detailing</h3>

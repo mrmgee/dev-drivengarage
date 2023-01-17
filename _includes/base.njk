@@ -1,6 +1,6 @@
 {% include "head.njk" %}
 
-  <body>
+  <body{% if bodyName|length %} class="{{ bodyName }}"{% endif %}>
 
 {% include "nav.njk" %}
 

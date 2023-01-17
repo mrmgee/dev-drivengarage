@@ -32,6 +32,7 @@ featuredImage: /_images/default.jpg
   {%set fullSlideP = pageSlideP+imgSlideP %}
   {% set imgSlideAlt = slide.altText %}
   {% set imgSlidePos = "" %}
+  {% set imgSizesResp = "13" %}
         <li class="slide-visible">
   {% if slide.title|length %}
           <div class="slide-box s{{ loop.index }}">
@@ -53,7 +54,7 @@ featuredImage: /_images/default.jpg
 
               <div class="column">
         {% if slide.image|length %}
-            {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos %}
+            {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos, ""+imgSizesResp %}
         {% endif %}
               </div>
 
@@ -61,7 +62,7 @@ featuredImage: /_images/default.jpg
 
               <div class="column">
         {% if slide.image|length %}
-            {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos %}
+            {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos, ""+imgSizesResp %}
         {% endif %}
               </div>
               <div class="column">
@@ -87,7 +88,7 @@ featuredImage: /_images/default.jpg
   {% else %}
           <div class="slide-box s{{ loop.index }} slide-img-full">
     {% if slide.image|length %}
-        {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos %}
+        {% image ""+fullSlideP, ""+imgSlideAlt, ""+imgSlidePos, ""+imgSizesResp %}
     {% endif %}  
           </div>
   {% endif %}
